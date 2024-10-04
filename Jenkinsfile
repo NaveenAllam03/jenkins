@@ -44,7 +44,7 @@ pipeline {
         failure {
             echo 'this runs when pipeline is failes' // generally used when pipiline fails for failure
         }
-        succes {
+        success {
             echo 'executes when pipeline is sucessful' // runs only when pipeline is sucessful
         }
     }
