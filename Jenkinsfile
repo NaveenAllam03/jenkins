@@ -12,10 +12,9 @@ pipeline {
     environment {
         greeting = 'hello jenkins'
     }
-    options{
+    //options{}
         // to write timeout, exits when time limit exceeds
         //disableconcurentbuilds()
-    }
 
     // build section, Write alll the build steps here 
     stages {
