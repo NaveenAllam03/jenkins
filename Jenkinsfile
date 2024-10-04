@@ -5,7 +5,19 @@ pipeline {
         node {
             label 'agent-1'
         }
-    }  
+    } 
+    parameters {
+        //write parameters and pass arguments in stages
+    }
+
+    environment {
+        greeting = 'hello jenkins'
+    }
+    options{
+        // to write timeout, exits when time limit exceeds
+        //disableconcurentbuilds()
+    }
+
     // build section, Write alll the build steps here 
     stages {
         stage('Hello') {
@@ -21,6 +33,8 @@ pipeline {
          stage('He') {
             steps {
                 echo 'Hello World'
+                sh """ 
+                """
             }
         }
     }
@@ -32,7 +46,7 @@ pipeline {
         failure {
             echo 'this runs when pipeline is failes' // generally used when pipiline fails for failure
         }
-        sucess {
+        succes {
             echo 'executes when pipeline is sucessful' // runs only when pipeline is sucessful
         }
     }
