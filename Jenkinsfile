@@ -6,9 +6,8 @@ pipeline {
             label 'agent-1'
         }
     } 
-    parameters {
+    // parameters {}
         //write parameters and pass arguments in stages
-    }
 
     environment {
         greeting = 'hello jenkins'
