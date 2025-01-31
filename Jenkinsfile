@@ -6,8 +6,11 @@ pipeline {
             label 'agent-1'
         }
     } 
-    // parameters {}
+    // parameters {
         //write parameters and pass arguments in stages
+        String(name: 'PERSON', defaultValue: '1.0.0', description: 'what is the artifcat version? ' )
+    }
+        
 
     environment {
         greeting = 'hello jenkins'
